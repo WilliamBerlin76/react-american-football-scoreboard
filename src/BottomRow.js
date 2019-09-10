@@ -4,7 +4,7 @@ import "./App.js";
 
 const BottomRow = () => {
   const [quarter, setQuarter] = useState(1);
-
+  
   return (
     <div className="bottomRow">
       <div className="down">
@@ -22,7 +22,7 @@ const BottomRow = () => {
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
         <div className="quarter__value">{quarter}</div>
-        <button onClick = {() => setQuarter(quarter + 1)}>Change Quarter</button>
+        <button className="quarter__button"onClick = {() => {if (quarter < 4){setQuarter(quarter + 1)} else {setQuarter(1)}}}>Change Quarter</button>
       </div>
     </div>
   );
